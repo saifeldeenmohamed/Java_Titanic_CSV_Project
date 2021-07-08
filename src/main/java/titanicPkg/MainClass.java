@@ -21,7 +21,7 @@ public class MainClass {
     public static void main(String[] args) throws IOException{
         
         
-        DataFrame<Object> df = DataFrame.readCsv("C:\\Users\\SaiF El-deen\\Desktop\\JavaITI\\Data_to_use\\titanic.csv");
+        DataFrame<Object> df = DataFrame.readCsv("D:\\AI\\JavaITI\\Data_to_use\\titanic.csv");
         
         DataFrame<Object> df2 = df.retain("sex", "age" , "survived")
                 .groupBy(row -> row.get(1))
@@ -47,7 +47,7 @@ public class MainClass {
         
         //1.Read from file
         Table titanicData;
-        String dataPath = "C:\\Users\\SaiF El-deen\\Desktop\\JavaITI\\Data_to_use\\titanic.csv";
+        String dataPath = "D:\\AI\\JavaITI\\Data_to_use\\titanic.csv";
         titanicData = Table.read().csv(dataPath);
         
         List<Column<?>> dataStructure = titanicData.columns();
